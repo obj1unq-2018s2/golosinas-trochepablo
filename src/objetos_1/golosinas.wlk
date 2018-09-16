@@ -94,13 +94,12 @@ object tuttifrutti {
 	var sabores = ["frutilla","chocolate","naranja"]
 	var gustoActual
 	
-	
 	method precio() = if (tieneGluten) 7 else 10
 	method peso() { return peso }
 	method mordisco() { 
 		peso = peso - 1
 		gustoActual = sabores.first()
-		sabores.remove(gustoActual)
+		sabores = sabores.drop(1)
 		sabores.add(gustoActual)
 	}
 	method gusto() = gustoActual
