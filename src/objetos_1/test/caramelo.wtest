@@ -1,0 +1,28 @@
+import golosinas.*
+
+describe "test de alfajor" {
+
+	test "peso inicial" {
+		assert.equals(300, alfajor.peso())
+	}
+	
+	test "precio" {
+		assert.equals(12, alfajor.precio())
+	}
+	
+	test "mordiscos" {
+		alfajor.mordisco()
+		assert.equals(120, alfajor.peso())
+		alfajor.mordisco()
+		assert.equals(48, alfajor.peso())
+	}
+	
+	test "gusto" {
+		assert.equals("chocolate", alfajor.gusto())
+	}
+	
+	test "no es libre de gluten" {
+		assert.notThat(alfajor.libreGluten())	
+	}
+	
+}
